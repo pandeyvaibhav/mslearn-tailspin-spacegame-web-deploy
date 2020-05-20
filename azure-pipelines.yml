@@ -88,7 +88,7 @@ stages:
               appName: '$(WebAppName)'
               package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
   
-- stage: 'Deploy Prod'
+- stage: 'Deploy_Prod'
   displayName: 'Deploy the web application to test'
   dependsOn: Build
   jobs:
