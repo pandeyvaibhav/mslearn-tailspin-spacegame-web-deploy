@@ -175,8 +175,10 @@ stages:
     - group: Release
     strategy:
       runOnce:
-        deploy:
+        deploy:      
           steps:
+          - bash: echo '$(databasename)'
+          - bash: echo '$(servername)'
           - download: current
             artifact: drop
           - task: AzureWebApp@1
