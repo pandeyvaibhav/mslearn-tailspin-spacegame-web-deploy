@@ -108,6 +108,8 @@ stages:
       runOnce:
         deploy:
           steps:
+          - bash: echo '$(databasename)'
+          - bash: echo '$(servername)'
           - download: current
             artifact: dropDacpac
             patterns: '**/*'
